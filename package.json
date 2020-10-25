@@ -7,8 +7,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "server",
-    "client"
+    "server"
   ],
   "scripts": {
     "start": "yarn nodemon ./index.js"
