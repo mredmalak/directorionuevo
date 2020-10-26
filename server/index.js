@@ -12,7 +12,7 @@ import musicRouter from './routes/music.js';
 const HOST = '127.0.0.1';
 const PORT = 5000;
 export const databaseURI = 'mongodb://localhost/mongoose-intro';
-// const databaseURI = 'mongodb://localhost:2700/mongoose-intro
+//export const databaseURI = 'mongodb://localhost:2700/mongoose-intro';
 
 // Creacion del servidor
 const server = express();

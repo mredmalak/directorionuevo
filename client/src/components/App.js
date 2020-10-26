@@ -1,17 +1,22 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 function App() {
+  const [artist, setArtist] = useState('');
 
-  const [location, setLocation] = useState('');
-
-  const handleChange = { event } => {
+  const handleChange = (event) => {
     const { value } = event.currentTarget;
     console.log(value);
+    setArtist(value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(artist);
   };
 
   return (
     <>
       <h1>Music forecast</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="artist"> Music band</label>
         <input
           type="search"
