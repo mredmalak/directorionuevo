@@ -16,6 +16,7 @@ function App() {
     console.log(artist);
   };
 
+  //weather is changed by bands
   return (
     <>
       <h1>Music forecast</h1>
