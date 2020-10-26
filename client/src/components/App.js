@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { getMusicbandsData } from '../lib/get-musicbands';
+
 function App() {
   const [artist, setArtist] = useState('');
 
@@ -10,6 +12,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    await getMusicbandsData(artist);
     console.log(artist);
   };
 
@@ -17,7 +20,7 @@ function App() {
     <>
       <h1>Music forecast</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="artist"> Music band</label>
+        <label htmlFor="artist">Music band</label>
         <input
           type="search"
           id="artist"
